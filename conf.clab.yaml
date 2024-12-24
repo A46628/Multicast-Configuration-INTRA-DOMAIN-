@@ -1,0 +1,28 @@
+name: multicast 
+topology: 
+  kinds: 
+    linux: 
+      image: wbitt/network-multitool:extra 
+    ceos: 
+      image: ceos 
+  nodes: 
+    r1: 
+      kind: ceos 
+    r2: 
+      kind: ceos 
+    r3: 
+      kind: ceos 
+    server: 
+      kind: linux 
+    client: 
+      kind: linux 
+ 
+  links: 
+    - endpoints: ["r1:eth1", "r2:eth1"] 
+    - endpoints: ["r1:eth2", "client:eth1"] 
+    - endpoints: ["r1:eth3", "r3:eth1"] 
+    - endpoints: ["r3:eth2", "r2:eth3"] 
+    - endpoints: ["r3:eth3", "macvlan:enp0s3"]
+    - endpoints: ["r2:eth2", "server:eth1"] 
+
+
