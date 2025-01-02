@@ -1,0 +1,335 @@
+{
+  "name": "msdp",
+  "type": "clab",
+  "clab": {
+    "config": {
+      "prefix": "clab",
+      "mgmt": {
+        "network": "clab",
+        "bridge": "br-0d4db97c5947",
+        "ipv4-subnet": "172.20.20.0/24",
+        "ipv4-gw": "172.20.20.1",
+        "ipv6-subnet": "3fff:172:20:20::/64",
+        "ipv6-gw": "3fff:172:20:20::1",
+        "mtu": 1500,
+        "external-access": true
+      }
+    }
+  },
+  "nodes": {
+    "domainA": {
+      "index": "0",
+      "shortname": "domainA",
+      "longname": "clab-msdp-domainA",
+      "fqdn": "domainA.msdp.io",
+      "group": "",
+      "labdir": "/home/Trabalho/REAS/Trab2/MulicastInterDomain/clab-msdp/domainA",
+      "kind": "ceos",
+      "image": "ceos",
+      "mgmt-net": "",
+      "mgmt-intf": "Management0",
+      "mgmt-ipv4-address": "172.20.20.7",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::7",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "00:1c:73:47:0a:05",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-0d4db97c5947",
+        "clab-node-group": "",
+        "clab-node-kind": "ceos",
+        "clab-node-lab-dir": "/home/Trabalho/REAS/Trab2/MulicastInterDomain/clab-msdp/domainA",
+        "clab-node-name": "domainA",
+        "clab-node-type": "",
+        "clab-owner": "paulo",
+        "clab-topo-file": "/home/Trabalho/REAS/Trab2/MulicastInterDomain/conf.clab.yaml",
+        "containerlab": "msdp"
+      },
+      "port-bindings": [
+      ]
+    },
+    "domainB": {
+      "index": "1",
+      "shortname": "domainB",
+      "longname": "clab-msdp-domainB",
+      "fqdn": "domainB.msdp.io",
+      "group": "",
+      "labdir": "/home/Trabalho/REAS/Trab2/MulicastInterDomain/clab-msdp/domainB",
+      "kind": "ceos",
+      "image": "ceos",
+      "mgmt-net": "",
+      "mgmt-intf": "Management0",
+      "mgmt-ipv4-address": "172.20.20.4",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::4",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "00:1c:73:53:35:a9",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-0d4db97c5947",
+        "clab-node-group": "",
+        "clab-node-kind": "ceos",
+        "clab-node-lab-dir": "/home/Trabalho/REAS/Trab2/MulicastInterDomain/clab-msdp/domainB",
+        "clab-node-name": "domainB",
+        "clab-node-type": "",
+        "clab-owner": "paulo",
+        "clab-topo-file": "/home/Trabalho/REAS/Trab2/MulicastInterDomain/conf.clab.yaml",
+        "containerlab": "msdp"
+      },
+      "port-bindings": [
+      ]
+    },
+    "domainC": {
+      "index": "2",
+      "shortname": "domainC",
+      "longname": "clab-msdp-domainC",
+      "fqdn": "domainC.msdp.io",
+      "group": "",
+      "labdir": "/home/Trabalho/REAS/Trab2/MulicastInterDomain/clab-msdp/domainC",
+      "kind": "ceos",
+      "image": "ceos",
+      "mgmt-net": "",
+      "mgmt-intf": "Management0",
+      "mgmt-ipv4-address": "172.20.20.5",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::5",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "00:1c:73:f0:03:d7",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-0d4db97c5947",
+        "clab-node-group": "",
+        "clab-node-kind": "ceos",
+        "clab-node-lab-dir": "/home/Trabalho/REAS/Trab2/MulicastInterDomain/clab-msdp/domainC",
+        "clab-node-name": "domainC",
+        "clab-node-type": "",
+        "clab-owner": "paulo",
+        "clab-topo-file": "/home/Trabalho/REAS/Trab2/MulicastInterDomain/conf.clab.yaml",
+        "containerlab": "msdp"
+      },
+      "port-bindings": [
+      ]
+    },
+    "domainD": {
+      "index": "3",
+      "shortname": "domainD",
+      "longname": "clab-msdp-domainD",
+      "fqdn": "domainD.msdp.io",
+      "group": "",
+      "labdir": "/home/Trabalho/REAS/Trab2/MulicastInterDomain/clab-msdp/domainD",
+      "kind": "ceos",
+      "image": "ceos",
+      "mgmt-net": "",
+      "mgmt-intf": "Management0",
+      "mgmt-ipv4-address": "172.20.20.2",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::2",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "00:1c:73:8a:29:34",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-0d4db97c5947",
+        "clab-node-group": "",
+        "clab-node-kind": "ceos",
+        "clab-node-lab-dir": "/home/Trabalho/REAS/Trab2/MulicastInterDomain/clab-msdp/domainD",
+        "clab-node-name": "domainD",
+        "clab-node-type": "",
+        "clab-owner": "paulo",
+        "clab-topo-file": "/home/Trabalho/REAS/Trab2/MulicastInterDomain/conf.clab.yaml",
+        "containerlab": "msdp"
+      },
+      "port-bindings": [
+      ]
+    },
+    "receiver": {
+      "index": "4",
+      "shortname": "receiver",
+      "longname": "clab-msdp-receiver",
+      "fqdn": "receiver.msdp.io",
+      "group": "",
+      "labdir": "/home/Trabalho/REAS/Trab2/MulicastInterDomain/clab-msdp/receiver",
+      "kind": "linux",
+      "image": "wbitt/network-multitool:extra",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.6",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::6",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-0d4db97c5947",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/Trabalho/REAS/Trab2/MulicastInterDomain/clab-msdp/receiver",
+        "clab-node-name": "receiver",
+        "clab-node-type": "",
+        "clab-owner": "paulo",
+        "clab-topo-file": "/home/Trabalho/REAS/Trab2/MulicastInterDomain/conf.clab.yaml",
+        "containerlab": "msdp"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 11443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 1180,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "source": {
+      "index": "5",
+      "shortname": "source",
+      "longname": "clab-msdp-source",
+      "fqdn": "source.msdp.io",
+      "group": "",
+      "labdir": "/home/Trabalho/REAS/Trab2/MulicastInterDomain/clab-msdp/source",
+      "kind": "linux",
+      "image": "wbitt/network-multitool:extra",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.3",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::3",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-0d4db97c5947",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/Trabalho/REAS/Trab2/MulicastInterDomain/clab-msdp/source",
+        "clab-node-name": "source",
+        "clab-node-type": "",
+        "clab-owner": "paulo",
+        "clab-topo-file": "/home/Trabalho/REAS/Trab2/MulicastInterDomain/conf.clab.yaml",
+        "containerlab": "msdp"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 11443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 1180,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        }
+      ]
+    }
+  },
+  "links": [
+    {
+      "a": {
+        "node": "domainA",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:e7:2e:b4",
+        "peer": "z"
+      },
+      "z": {
+        "node": "source",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:15:d3:04",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "domainA",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:b7:78:34",
+        "peer": "z"
+      },
+      "z": {
+        "node": "domainB",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:f0:ef:97",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "domainA",
+        "interface": "eth3",
+        "mac": "aa:c1:ab:85:22:c7",
+        "peer": "z"
+      },
+      "z": {
+        "node": "domainD",
+        "interface": "eth3",
+        "mac": "aa:c1:ab:ce:d8:7c",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "domainB",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:a6:ca:8b",
+        "peer": "z"
+      },
+      "z": {
+        "node": "domainC",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:fa:fc:41",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "domainC",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:52:8e:7c",
+        "peer": "z"
+      },
+      "z": {
+        "node": "domainD",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:82:24:20",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "domainD",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:63:68:15",
+        "peer": "z"
+      },
+      "z": {
+        "node": "receiver",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:b1:8c:53",
+        "peer": "a"
+      }
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+! Startup-config last modified at Tue Dec 10 17:12:30 2024 by root
+! device: domainA (cEOSLab, EOS-4.33.0F-39050855.4330F (engineering build))
+!
+no aaa root
+!
+username admin privilege 15 role network-admin secret sha512 $6$c6woTr5q388KJZf0$1pqpDoyDuJE8daXN/8lmjo3dLWlsfXA2LShwZ/o71LdMPsP6BJA.Y6ltDhhQUmhSj3VpxgsnOTUB0KYVY6ftw0
+!
+management api http-commands
+   no shutdown
+!
+no service interface inactive port-id allocation disabled
+!
+transceiver qsfp default-mode 4x10G
+!
+service routing protocols model multi-agent
+!
+hostname domainA
+!
+spanning-tree mode mstp
+!
+system l1
+   unsupported speed action error
+   unsupported error-correction action error
+!
+management api gnmi
+   transport grpc default
+!
+management api netconf
+   transport ssh default
+!
+interface Ethernet1
+   no switchport
+   ip address 192.168.1.254/24
+   pim ipv4 sparse-mode
+!
+interface Ethernet2
+   no switchport
+   ip address 172.16.13.3/24
+   pim ipv4 sparse-mode
+!
+interface Ethernet3
+   no switchport
+   ip address 172.16.23.3/24
+   pim ipv4 sparse-mode
+!
+interface Loopback0
+   ip address 172.16.0.3/32
+!
+interface Management0
+   ip address 172.20.20.7/24
+   ipv6 address 3fff:172:20:20::7/64
+!
+ip routing
+!
+ip route 0.0.0.0/0 172.20.20.1
+!
+ipv6 route ::/0 3fff:172:20:20::1
+!
+router bgp 65001
+   neighbor 172.16.13.1 remote-as 65001
+   network 172.16.0.3/32
+   network 192.168.1.0/24
+!
+router multicast
+   ipv4
+      routing
+      software-forwarding sfe
+   !
+   ipv6
+      software-forwarding kernel
+!
+router pim sparse-mode
+   ipv4
+      rp address 172.16.0.1
+!
+end
